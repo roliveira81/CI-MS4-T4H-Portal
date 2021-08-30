@@ -28,6 +28,10 @@ The aim of this web application is to strengthen our online presence, gathering 
   * [WireFrames](#wireframes)
 - [Strategy](#strategy)
 - [Scope](#scope)
+  * [Existing Features](#existing-features)
+- [Scope](#scope)  
+
+### Structure
 
 ## User experience
 
@@ -67,8 +71,6 @@ The aim of this web application is to strengthen our online presence, gathering 
    - As an admin user, I want to delete existing merchandising products listing, so that I can avoid out of stock items for customers;
    - As an admin user, I want to add new merchandising products and category listings, so that I can make new items available for purchasing;
    - As an admin user, I want to update orders delivery status, so that I can keep customers updated on the delivery of their items;
-
-### WireFrames
 
 ### Strategy
 
@@ -116,3 +118,94 @@ Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
 - Forgot Password feature
 - Past Dates on Shows section.
 - Implement further communication to the user via email for order invoices & confirmation.
+
+### Structure
+
+The structure is a mix of a single page application, to ease of navigation to each content section hinting for quick impact and a multiple page application to provides a progressive step while purchase process, making it easier.
+
+#### Interaction Design and Architecture
+
+A template with a full-width content area to layout the texts, images, and photos aiming straightforward navigation supported by Django apps built using bootstrap 5 Html elements
+All the content is organized accordingly the main menu at the top presenting the sections sequence and clearly for the user.
+
+#### Databases
+
+- [SQLite3](https://www.sqlite.org/index.html) used in Development, which comes as default with Django installation.
+
+#### Apps and Models used
+
+- Home App
+
+  - The **Agenda model** stores information about the tour dates.
+
+  - The **Product model** stores information about the band's merch.
+
+  - The **Category model** stores information about the band's merch categories and is used in the Product model as a specific category.
+
+- Profiles App
+
+  - The **UserProfile** model stores information about registered users, including order history and delivery statuses.
+
+- Checkout App
+
+  - The **Order** model stores information about each order placed.
+
+  - The **OrderLineItem** model stores information from the order, used in calculation in the Order model.
+
+#### Model Relationship Data Schema
+
+![DB Schema](docs/)
+
+### Skeleton
+  
+### WireFrames
+
+[SEE FULL WF](docs/wireframes/)
+
+#### Anonymous Users
+
+- [HOME Page](docs)
+
+#### Registered Users
+
+- [HOME Page](docs)
+
+#### AdminUser
+
+- [HOME Page](docs)
+
+The idea is to keep it simple and straightforward, gathering info in sections on home pages and separate "stepped" pages for the purchasing process.
+
+- Menu bar pointing to each section on home page:
+  - Shows
+  - Media
+  - About
+  - Contact
+- Menu bar pointing to separate page:
+  - Store
+  - My Account
+  - Cart items count
+
+### Surface  
+
+For clean code purposes, I chose a Bootstrap template that perfectly matches the objectives of this website idea, taking leverage of the boilerplate pre-built by [StartBootstrap](https://github.com/startbootstrap/startbootstrap-creative).
+
+#### Colours
+
+A colour palette tending to hot colours, favouring reading and a bold yet professional contrast.
+![Colour palette](static/img/palette.png)
+
+#### Typography
+
+- Headings - "Merriweather Sans" font (with fall-back font of Serif). 
+- Content - "Merriweather.
+
+#### Images
+
+All band, members, live performance images and logos are band's property represented by myself, developer responsible as well as merch images.
+
+#### Animations
+
+To ensure the site is uncluttered, a minimalistic approach has been taken in terms of animation. The carousels have been given a delay for soft transitions, navigation with smooth scroll effect and buttons have very subtle hover and click effects.
+
+> [Back to Top](#table-of-contents)  

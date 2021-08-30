@@ -1,5 +1,5 @@
 <div align="center">
-<img src="static/img/logo_readme.png" alt="T4H Metallica Tribute Band"/>
+<img src="static/img/logos/logo_readme.png" alt="T4H Metallica Tribute Band"/>
 <br>
 A METALLICA tribute band from Brazil
 </div>
@@ -26,6 +26,8 @@ The aim of this web application is to strengthen our online presence, gathering 
 - [User experience](#user-experience)
   * [User Stories](#user-stories)
   * [WireFrames](#wireframes)
+- [Strategy](#strategy)
+- [Scope](#scope)
 
 ## User experience
 
@@ -39,7 +41,7 @@ The aim of this web application is to strengthen our online presence, gathering 
   - As an anonymous user, I want to check the upcoming concert dates quickly browsing by band tour calendar;
   - As an anonymous user, I want to find the band other social media, so that I can following them;
   - As an anonymous user, I want to see videos and photos and check their live performances;
-  - As an anonymous user, I want to check the personalized merchandising item and their prices, so that I can make an order and support the band;
+  - As an anonymous user, I want to check the merchandising items and their prices, so that I can make an order and support the band;
   - As an anonymous user, I want to access contact details, so that I can get in touch to book the band;
   - As an anonymous user, I want to register for a user profile account by email and password and store details of orders history;
 
@@ -67,3 +69,50 @@ The aim of this web application is to strengthen our online presence, gathering 
    - As an admin user, I want to update orders delivery status, so that I can keep customers updated on the delivery of their items;
 
 ### WireFrames
+
+### Strategy
+
+Based on 17 years of experience touring throughout Brazil, some Latin American countries and has been in Portugal and Spain once, THE FOUR HORSEMEN has become an increasingly strong and professional live music project.
+
+This website project comes to shows how serious we are about performing alive and getting booked, working behind the scenes making it easy to learn more about the band and connect, while we are on the road.
+
+The main strategy of this site is to translate our stage presence, giving us a boost in the right direction, selling merch or booking concerts, making possible fans and the live music industry be able to find us at our official website address.
+
+#### Project Goals
+
+Increase internet presence presenting relevant content about the band and improve its positioning in the main internet search engines outcomes. Increasing number of fans, increasing concert bookings and merchan sales.
+
+#### User Goals
+
+Users can find easily the band info details, see photos and videos, purchase band's merch or booking concerts.
+
+### Scope
+
+Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
+
+#### Existing Features
+
+- Fully responsive website across all popular devices, using Bootstrap Grid and custom media queries
+- Intuitive and responsive Navigation menu
+- About section on Home page to read the band concept
+- Shows section on Home page to read the upcoming concert dates
+- Media section with an interactive lightbox with images and Youtube embed live performance videos  
+- Store page with available band merch 
+- Login page with form
+- Profile/account page
+- Checkout page
+- Order history and status page
+- Footer element with social media icon links.
+- Ability for admin user to add, update and delete concert date entries.
+- Ability for admin to add, update and delete stock merch entries.
+- Ability for admin to update orders delivery status.
+
+
+#### Future Features to Implement
+
+- Login with others Social Media options
+- Share content with others Social Media apps
+- Guestbook page
+- Forgot Password feature
+- Past Dates on Shows section.
+- Implement further communication to the user via email for order invoices & confirmation.

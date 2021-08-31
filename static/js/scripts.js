@@ -51,32 +51,40 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Activate SimpleLightbox plugin for media items
+    // Activate SimpleLightbox plugin for portfolio items
     new SimpleLightbox({
-        elements: '#media a.media-box'
+        elements: '#portfolio a.portfolio-box'
     });
 
 });
 
-/*UP BUTTON---------------------------------------------------------------------------------*/
-/*Credits: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp*/
+//https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+//Get the button:
+mybutton = document.getElementById("topBtn");
 
-// //Get the button:
-// mybutton = document.getElementById("topBtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
 
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       mybutton.style.display = "block";
+   } else {
+       mybutton.style.display = "none";
+   }
+}
 
-// function scrollFunction() {
-//    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//        mybutton.style.display = "block";
-//    } else {
-//        mybutton.style.display = "none";
-//    }
-// }
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+   document.body.scrollTop = 0; // For Safari
+   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//    document.body.scrollTop = 0; // For Safari
-//    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// }
+/*Change the nav-bar behavior to autoclose for specific <a> elements
+and keep it open for dropdown menu items, triggering the jquery function
+below when the element has the css class auto-hide*/
+$(function(){ 
+    var navMain = $(".navbar-collapse");
+    navMain.on("click", "a.auto-hide:not([data-toggle])", null, function () {
+        navMain.collapse('hide');
+    });
+});

@@ -103,7 +103,7 @@ Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
 - About section on Home page to read the band concept
 - Shows section on Home page to read the upcoming concert dates
 - Media section with an interactive lightbox with images and Youtube embed live performance videos  
-- Store page with available band merch 
+- Merch page with available band merchandise 
 - Login page with form
 - Profile/account page
 - Checkout page
@@ -184,7 +184,7 @@ The idea is to keep it simple and straightforward, gathering info in sections on
   - About
   - Contact
 - Menu bar pointing to separate page:
-  - Store
+  - Merch
   - My Account
   - Cart items count
   - Product admin feature
@@ -214,17 +214,17 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Languages
 
-[HTML5](https://en.wikipedia.org/wiki/HTML5)
-[CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-[Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Integration
 
-[StartBootstrap](https://startbootstrap.com/) - Clone the repo: [git clone](https://github.com/StartBootstrap/startbootstrap-creative.git)
-[Bootstrap Icons](https://icons.getbootstrap.com/) Icons for Social Media links
-[Google Fonts](https://fonts.google.com/) - Overall Typography import
-[jQuery](https://jquery.com/) - JavaScript library
-[Django](#) Micro web framework written in Python
+- [StartBootstrap](https://startbootstrap.com/) - Clone the repo: [git clone](https://github.com/StartBootstrap/startbootstrap-creative.git)
+- [Bootstrap Icons](https://icons.getbootstrap.com/) Icons for Social Media links
+- [Google Fonts](https://fonts.google.com/) - Overall Typography import
+- [jQuery](https://jquery.com/) - JavaScript library
+- [Django](#) Micro web framework written in Python
 
 ### Dependencies

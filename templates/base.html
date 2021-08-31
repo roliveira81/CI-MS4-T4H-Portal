@@ -21,6 +21,7 @@
             <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
             <!-- SimpleLightbox plugin CSS-->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>            
             <!-- Core theme CSS (includes Bootstrap)-->
             <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         {% endblock %}
@@ -34,7 +35,6 @@
             <!-- SimpleLightbox plugin JS-->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
             <!-- Core theme JS-->
-            <script src="{% static 'js/scripts.js' %}"></script>
         {% endblock %}
 
         {% block extra_js %}
@@ -47,21 +47,28 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="{% url 'home' %}" alt="Home" title="TF4 Logo" ><img class="menu-logo"></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#shows">Shows</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="merchan.html#account">Account</a></li>
-                        <li class="nav-item"><a class="nav-link" href="merchan.html#shop">Merchan</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#cart"><h5><i class="bi-cart-fill"></i> 0</h5></a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#shows">Shows</a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#media">Media</a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Merch</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item auto-hide" href="#">Action</a></li>
+                                <li><a class="dropdown-item auto-hide" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item auto-hide" href="#">Something else here</a></li>
+                            </ul>
+                        </li>            
+                        <li class="nav-item"><a class="nav-link" href="#cart"><i class="bi-cart-fill"></i> 0</a></li>                        
                     </ul>
                 </div>
-            </div>
+            </div>        
         </nav>
-
         {% if messages %}
             <div class="container-fluid fixed-top"></div>
         {% endif%}
@@ -75,7 +82,7 @@
         <footer class="bg-dark py-5">
             <div class="container">
                 <div class="row">
-                    <div class="text-center text-muted">THE FOUR HORSEMEN - METALLICA TRIBUTE BAND - 2021</div>
+                    <div class="text-center text-muted">THE FOUR HORSEMEN<br/>A METALLICA tribute band - 2021</div>
                 </div>
             </div>
             <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="bi bi-arrow-up"></i></button>
@@ -101,6 +108,8 @@
         </footer>
 
         {% block postloadjs %}
+        <script src="{% static 'js/scripts.js' %}"></script>
+
         {% endblock %}
     </body>
 </html>

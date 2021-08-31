@@ -11469,6 +11469,95 @@ header.masthead h1, header.masthead .h1 {
   }
 }
 
+/* SHOWS SECTION---------------------------------------------------------------------------------*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+thead {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  border-bottom: 1px solid #39393b;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+td {
+  vertical-align: top;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cacacd;
+  padding: 12px 0px;
+  color: #efefef;
+}
+table a {
+  color: #ffffff;
+}
+table#tour-table {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+table#tour-table:hover {
+  background: rgba(100, 100, 100, 0.45);
+}
+table a.rsvp-band.not-avail-band, body a.rsvp-band.not-avail-band:hover {
+  border-color: #ed412f;
+}
+table a.rsvp-band {
+  border-color: #2faced;
+}
+table a.rsvp-band {
+  border-color: #2faced;
+}
+a.rsvp-band {
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 11px;
+  color: #ffffff;
+  padding: 4px 8px;
+  border: 2px solid red;
+  position: relative;
+  bottom: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+#tour {
+  background-color: #222225;
+}
+#tour-section-div-table {
+  padding-top: 100px;
+}
+caption a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #bb9126;
+}
+  caption a:hover {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #bb9126;
+  }
+
 /*UP BUTTON---------------------------------------------------------------------------------*/
 /*Credits: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 */

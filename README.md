@@ -118,7 +118,7 @@ Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
 
 - Login with others Social Media options
 - Share content with others Social Media apps
-- Guestbook page
+- Media content manageable by Admin system
 - Forgot Password feature
 - Past Dates on Shows section.
 - Implement further communication to the user via email for order invoices & confirmation.

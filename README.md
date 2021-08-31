@@ -25,11 +25,15 @@ The aim of this web application is to strengthen our online presence, gathering 
 
 - [User experience](#user-experience)
   * [User Stories](#user-stories)
-  * [WireFrames](#wireframes)
 - [Strategy](#strategy)
 - [Scope](#scope)
   * [Existing Features](#existing-features)
-- [Scope](#scope)  
+- [Structure](#structure)  
+  * [Databases](#databases)
+- [Skeleton](#skeleton)
+  * [WireFrames](#wireframes)    
+- [Surface](#surface)   
+- [Technologies Used](#technologies-used)
 
 ### Structure
 
@@ -160,19 +164,17 @@ All the content is organized accordingly the main menu at the top presenting the
   
 ### WireFrames
 
-[SEE FULL WF](docs/wireframes/)
-
 #### Anonymous Users
 
-- [HOME Page](docs)
+- [Anonymous Users Perspective](static/docs/CI_MS4_WF_AnonUser.pdf)
 
 #### Registered Users
 
-- [HOME Page](docs)
+- [Registered Users Perspective](static/docs/CI_MS4_WF_RegUser.pdf)
 
 #### AdminUser
 
-- [HOME Page](docs)
+- [Admin User Perspective](static/docs/CI_MS4_WF_AdminUser.pdf)
 
 The idea is to keep it simple and straightforward, gathering info in sections on home pages and separate "stepped" pages for the purchasing process.
 
@@ -185,6 +187,8 @@ The idea is to keep it simple and straightforward, gathering info in sections on
   - Store
   - My Account
   - Cart items count
+  - Product admin feature
+  - Shows dates admin feature
 
 ### Surface  
 
@@ -204,8 +208,23 @@ A colour palette tending to hot colours, favouring reading and a bold yet profes
 
 All band, members, live performance images and logos are band's property represented by myself, developer responsible as well as merch images.
 
-#### Animations
+## Technologies Used
 
-To ensure the site is uncluttered, a minimalistic approach has been taken in terms of animation. The carousels have been given a delay for soft transitions, navigation with smooth scroll effect and buttons have very subtle hover and click effects.
+Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
-> [Back to Top](#table-of-contents)  
+### Languages
+
+[HTML5](https://en.wikipedia.org/wiki/HTML5)
+[CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+[Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Integration
+
+[StartBootstrap](https://startbootstrap.com/) - Clone the repo: [git clone](https://github.com/StartBootstrap/startbootstrap-creative.git)
+[Bootstrap Icons](https://icons.getbootstrap.com/) Icons for Social Media links
+[Google Fonts](https://fonts.google.com/) - Overall Typography import
+[jQuery](https://jquery.com/) - JavaScript library
+[Django](#) Micro web framework written in Python
+
+### Dependencies

@@ -11302,6 +11302,15 @@ body {
   border-radius: 10rem;
 }
 
+.btn-medium {
+  padding: .5rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
 hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
@@ -11379,7 +11388,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.4) 0%, rgba(92, 77, 66, 0.4) 100%), url("/static/img/masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11443,3 +11452,46 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+/*CUSTOMIZATIONS---------------------------------------------------------------------------------*/
+.menu-logo{
+  width:200px;
+  content:url("/static/img/logos/logo-horsemen-black.png")
+}  
+
+@media (min-width: 992px) {
+  .navbar-brand .menu-logo {
+    content:url("/static/img/logos/logo-horsemen.png")
+  }
+  
+  .navbar-shrink .navbar-brand .menu-logo{
+    content:url("/static/img/logos/logo-horsemen-black.png")
+  }
+}
+
+/*UP BUTTON---------------------------------------------------------------------------------*/
+/*Credits: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+*/
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  color: #fff;
+  background-color: #f4623a;
+  border-color: #f4623a;
+}
+
+  #topBtn:hover {
+      color: #fff;
+      background-color: #cf5331;
+      border-color: #c34e2e;
+  }

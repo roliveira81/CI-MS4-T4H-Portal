@@ -4,7 +4,7 @@
         "model": "products.product",
         "fields": {
           "sku": "sku",
-          "name": "T4H Logo black T-Shirt Mens",
+          "name": "T4H Logo black - Mens",
           "description": "100% Cotton, Black, Short Sleeve T-Shirt. Featuring 'T4Horsemen' artwork by us.",
           "price": 26.99,
           "category": 2,
@@ -20,7 +20,7 @@
         "model": "products.product",
         "fields": {
           "sku": "sku",
-          "name": "T4H Logo white T-Shirt Mens",
+          "name": "T4H Logo white - Mens",
           "description": "100% Cotton, Black, Short Sleeve T-Shirt. Featuring 'T4Horsemen' artwork by us.",
           "price": 26.99,
           "category": 2,
@@ -36,7 +36,7 @@
         "model": "products.product",
         "fields": {
           "sku": "sku",
-          "name": "T4H Logo black TShirts - Girls",
+          "name": "T4H Logo black - Girls",
           "description": "100% Organic Ringspun Combed Cotton. Featuring 'T4Horsemen' artwork by us.",
           "price": 22.99,
           "category": 2,
@@ -52,7 +52,7 @@
         "model": "products.product",
         "fields": {
           "sku": "sku",
-          "name": "T4H Logo white TShirts - Girls",
+          "name": "T4H Logo white - Girls",
           "description": "100% Organic Ringspun Combed Cotton. Featuring 'T4Horsemen' artwork by us.",
           "price": 22.99,
           "category": 2,
@@ -68,7 +68,7 @@
         "model": "products.product",
         "fields": {
           "sku": "sku",
-          "name": "T4H Skull black T-Shirts Mens",
+          "name": "T4H Skull black - Mens",
           "description": "100% Cotton, Black, Short Sleeve T-Shirt. Featuring 'T4Horsemen Skull' artwork by us.",
           "price": 20.99,
           "category": 2,
@@ -87,9 +87,9 @@
           "name": "T4H Logo Hat",
           "description": "Bringing you the high quality of 47 brand, the M logo on a soft fitted, adjustable hat!",
           "price": 23.99,
-          "category": 2,
+          "category": 3,
           "rating": 0,
-          "image_url": "hat_t4h.jpg",
+          "image_url": "",
           "image": "hat_t4h.jpg",
           "stock": 3
         }
@@ -102,9 +102,9 @@
           "name": "..And Coffee for all Mug",
           "description": "12 oz. ceramic coffee mug",
           "price": 13.99,
-          "category": 3,
+          "category": 4,
           "rating": 0,
-          "image_url": "mug_t4h.jpg",
+          "image_url": "",
           "image": "mug_t4h.jpg",
           "stock": 3
         }
@@ -119,7 +119,7 @@
           "price": 5.99,
           "category": 1,
           "rating": 0,
-          "image_url": "pic_t4h.jpg",
+          "image_url": "",
           "image": "pick_robh.jpg",
           "stock": 3
         }

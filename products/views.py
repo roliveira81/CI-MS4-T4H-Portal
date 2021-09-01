@@ -6,7 +6,8 @@ from .models import Product
 def all_products(request):
     """ A view to return all products - store page """
 
-    products = Product.objects.all()
+    # get only available products in stock
+    products = Product.objects.filter(stock__gt=0)
 
     context = {
         'products': products,

@@ -121,7 +121,6 @@
                 if (window.location.pathname !== '/')
                 {
                     $(document).on('click', '#navbarSupportedContent a', function(e) {
-                        e.preventDefault();
                         let target = $(this).attr('href');
                     
                         if (target.indexOf('#home_') > -1)

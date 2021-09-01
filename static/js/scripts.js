@@ -80,3 +80,18 @@ $(function(){
         navMain.collapse('hide');
     });
 });
+
+
+//function to make the menu links work out of single page
+if (window.location.pathname !== '/')
+{
+    $(document).on('click', '#navbarSupportedContent a', function(e) {
+        let target = $(this).attr('href');
+    
+        if (target.indexOf('#home_') > -1)
+        {
+            target = "/" + target
+            window.location.href = target;
+        }
+    });
+}         

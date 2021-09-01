@@ -58,19 +58,3 @@
         </div>
     </section>
 {% endblock %}
-
-{% block extra_js %}
-    <script>
-        $(document).on('click', '#navbarSupportedContent a', function(e) {
-            e.preventDefault();
-            let target = $(this).attr('href');
-
-            if (target.indexOf('#home_') > -1)
-            {
-                target = "{% url 'home' %}" + target
-                window.location.href = target;
-                console.log(target);
-            }
-        });
-    </script>
-{% endblock %}    

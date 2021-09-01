@@ -69,8 +69,8 @@
                                 {% endif %}                                
                             </ul>
                         </li>            
-                        {% if total_items %}
-                            <li class="nav-item"><a class="nav-link" href="{% url 'view_bag' %}"><i class="bi-cart-fill"></i> {{ total_items }}</a></li>                        
+                        {% if product_count %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'view_bag' %}"><i class="bi-cart-fill"></i> {{ product_count }}</a></li>                        
                         {% endif %}                        
                     </ul>
                 </div>
@@ -115,8 +115,9 @@
         </footer>
 
         {% block postloadjs %}
-            <script src="{% static 'js/scripts.js' %}"></script>
-            <script>
+            <script src="{% static 'js/scripts.js' %}" type="text/javascript"></script>
+            <script type="text/javascript">
+                //function to make the menu links work out of single page
                 if (window.location.pathname !== '/')
                 {
                     $(document).on('click', '#navbarSupportedContent a', function(e) {

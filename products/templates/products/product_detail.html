@@ -32,72 +32,52 @@
                         <span>${{ product.price }}</span>
                     </div>
                     <p class="text-muted mb--0">{{ product.description }}</p>
-
+                    
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                        {% csrf_token %}
-                        {% with product.has_sizes as s %}
-                        {% if s %}
-                            <div class="col-2 fs-5 mb-2">
-                                <p><strong>Size:</strong></p>
-                                <select class="form-select" name="product_size" id='id_product_size' aria-label="Default select example">
-                                    <option value="">Pick one</option>
-                                    <option value="xs">XS</option>
-                                    <option value="s">S</option>
-                                    <option value="m" selected>M</option>
-                                    <option value="l">L</option>
-                                    <option value="xl">XL</option>
-                                </select>
-                            </div>
-                        {% endif %}                        
-                        <div class="d-flex">
-                            <div class="col-3 d-flex justify-content-end align-items-start">
+                        <div class="row">
+                            {% csrf_token %}
+                            {% with product.has_sizes as s %}
+                            {% if s %}
+                                <div class="col-12 mt-5">
+                                    <span>Size:</span>    
+                                    <select class="form-select" name="product_size" id='id_product_size'style="width: 90px">
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                            {% endif %}                        
+                            <div class="col-6 align-self-end mt-5">
                                 <div class="d-flex align-items-center">
                                     <a href="#!" type="button" title="add item" class="btn btn-primary btn-small" onclick="incrementQtt()">
                                         <i class="bi bi-plus"></i>
                                     </a>
-                                    <input class="form-control text-center me-3 floatNumber" pattern="[0-9]*" style="width: 4rem" type="num" name="quantity" value="1" min="1" max="99" aria-required="" maxlength="2" data-item_id="{{ product.id }}" id="qttField">
+                                    <input class="form-control text-center floatNumber" style="width: 4rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ product.id }}" id="qttField" required>
                                     <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" onclick="decrementQtt()">
                                         <i class="bi bi-dash"></i>
                                     </a>
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-xl" type="submit" data-bs-toggle="modal">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
+                        </div> 
+                        <div class="row">
+                            <div class="col-6 fs-5 mt-5">
+                                <button class="btn btn-primary btn-xl" type="submit">
+                                    <i class="bi-cart-fill me-1"></i>
+                                    Add to cart
+                                </button>
+                            </div>
+                            <div class="col-6 fs-5 mt-5 align-self-end">
+                                <a class="btn btn-outline-dark mt-aut" href="{% url 'products' %}">Keep Shopping</a>  
+                            </div>
                         </div>
+                     
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
-                    </form>    
-                    <div class="fs-5 mt-5">
-                        <a class="btn btn-outline-dark mt-auto" href="{% url 'products' %}">Keep Shopping</a>
-                    </div>                                  
+                    </form>                               
                 </div>
             </div>
         </div>
     </section>
-{% endblock %}
-
-{% block postloadjs %}
-<script type="text/javascript">
-    //integer value validation
-    $('input.floatNumber').on('input', function() {
-        this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');
-    });       
-
-    var i = $("#qttField").val();
-    function incrementQtt() {
-        if (i < 10) {
-            i++;
-        }
-        $("#qttField").val(i);
-    }
-
-    function decrementQtt() {
-        if (i > 1) {
-            --i;
-        }
-        $("#qttField").val(i);
-    }    
-</script>
 {% endblock %}

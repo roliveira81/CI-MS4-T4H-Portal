@@ -95,3 +95,33 @@ if (window.location.pathname !== '/')
         }
     });
 }         
+
+//integer value validation product pages
+$('input.floatNumber').on('input', function() {
+    this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');
+});       
+
+//increment/decrement value on product quantity input fields
+
+function incrementQtt() {
+    let i = $("#qttField").val();
+    if (i < 99) {
+        i++;
+    }
+    $("#qttField").val(i);
+}
+
+//decrement value on product quantity input fields
+function decrementQtt() {
+    let i = $("#qttField").val(); 
+    if (i > 1) {
+        --i;
+    }
+    $("#qttField").val(i);
+}   
+
+//prevent form with quantity 0 to be submitted
+$('form').on('submit', function() {
+    if($("#qttField").val() == 0)
+        return false;
+});

@@ -11306,15 +11306,6 @@ body {
   border-radius: 10rem;
 }
 
-.btn-medium {
-  padding: .5rem 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 10rem;
-}
-
 hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
@@ -11472,6 +11463,24 @@ header.masthead h1, header.masthead .h1 {
     content:url("/static/img/logos/logo-horsemen-black.png")
   }
 }
+  
+  /*buttons*/
+  .btn-medium {
+    padding: .5rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+  }
+
+  .btn-small {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    margin: 2px;
+  }
 
 /* SHOWS SECTION---------------------------------------------------------------------------------*/
 

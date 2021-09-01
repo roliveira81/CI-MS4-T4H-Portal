@@ -1,0 +1,127 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H Logo black T-Shirt Mens",
+          "description": "100% Cotton, Black, Short Sleeve T-Shirt. Featuring 'T4Horsemen' artwork by us.",
+          "price": 26.99,
+          "category": 2,
+          "rating": 0,
+          "image_url": "",
+          "image_thumb": "shirt_t4h_1_model.jpg",
+          "image": "shirt_t4h_1_m.jpg",
+          "stock": 3
+        }
+      },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H Logo white T-Shirt Mens",
+          "description": "100% Cotton, Black, Short Sleeve T-Shirt. Featuring 'T4Horsemen' artwork by us.",
+          "price": 26.99,
+          "category": 2,
+          "rating": 0,
+          "image_url": "",
+          "image_thumb": "shirt_t4h_2_m.jpg",
+          "image": "shirt_t4h_2_m.jpg",
+          "stock": 3
+        }
+      },  
+      {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H Logo black TShirts - Girls",
+          "description": "100% Organic Ringspun Combed Cotton. Featuring 'T4Horsemen' artwork by us.",
+          "price": 22.99,
+          "category": 2,
+          "rating": 0,
+          "image_url": "",
+          "image_thumb": "baby_t4h_1.jpg",      
+          "image": "baby_t4h_1.jpg",
+          "stock": 3
+        }
+      },
+      {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H Logo white TShirts - Girls",
+          "description": "100% Organic Ringspun Combed Cotton. Featuring 'T4Horsemen' artwork by us.",
+          "price": 22.99,
+          "category": 2,
+          "rating": 0,
+          "image_url": "",
+          "image_thumb": "baby_t4h_2.jpg",      
+          "image": "baby_t4h_2.jpg",
+          "stock": 3
+        }
+      },  
+      {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H Skull black T-Shirts Mens",
+          "description": "100% Cotton, Black, Short Sleeve T-Shirt. Featuring 'T4Horsemen Skull' artwork by us.",
+          "price": 20.99,
+          "category": 2,
+          "rating": 0,
+          "image_url": "",
+          "image_thumb": "shirt_skul_1_m.jpg",
+          "image": "shirt_skul_1_m.jpg",
+          "stock": 3
+        }
+      },
+      {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H Logo Hat",
+          "description": "Bringing you the high quality of 47 brand, the M logo on a soft fitted, adjustable hat!",
+          "price": 23.99,
+          "category": 2,
+          "rating": 0,
+          "image_url": "hat_t4h.jpg",
+          "image": "hat_t4h.jpg",
+          "stock": 3
+        }
+      },  
+      {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "..And Coffee for all Mug",
+          "description": "12 oz. ceramic coffee mug",
+          "price": 13.99,
+          "category": 3,
+          "rating": 0,
+          "image_url": "mug_t4h.jpg",
+          "image": "mug_t4h.jpg",
+          "stock": 3
+        }
+      },
+      {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+          "sku": "sku",
+          "name": "T4H tour Picks",
+          "description": "Pick tin contains 8 guitar picks from various songs artwork. A must have for our fans! Made by Planet Waves.",
+          "price": 5.99,
+          "category": 1,
+          "rating": 0,
+          "image_url": "pic_t4h.jpg",
+          "image": "pick_robh.jpg",
+          "stock": 3
+        }
+      }  
+    ]

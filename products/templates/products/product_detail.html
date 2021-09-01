@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Product details sectioin-->
+    <section class="page-section bg-light">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Product details!</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Check how cool that item would fit you!</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    {% if product.image %}                    
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                   {% endif %}                  
+                </div>
+                <div class="col-md-6">
+                    <!--<div class="small mb-1">SKU: BST-498</div>-->
+                    <h2 class="mt-0">{{ product.name }}</h2>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through">$30.00</span>
+                        <span>${{ product.price }}</span>
+                    </div>
+                    <p class="text-muted mb-5">{{ product.description }}</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                        <button class="btn btn-primary btn-xl" type="button" data-bs-toggle="modal" data-bs-target="#modalBasket">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

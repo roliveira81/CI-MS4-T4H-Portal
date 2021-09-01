@@ -11421,14 +11421,14 @@ header.masthead h1, header.masthead .h1 {
   }
 }
 
-#media .container-fluid, #media .container-sm, #media .container-md, #media .container-lg, #media .container-xl, #media .container-xxl {
+#home_media .container-fluid, #home_media .container-sm, #home_media .container-md, #home_media .container-lg, #home_media .container-xl, #home_media .container-xxl {
   max-width: 1920px;
 }
-#media .container-fluid .media-box, #media .container-sm .media-box, #media .container-md .media-box, #media .container-lg .media-box, #media .container-xl .media-box, #media .container-xxl .media-box {
+#home_media .container-fluid .media-box, #home_media .container-sm .media-box, #home_media .container-md .media-box, #home_media .container-lg .media-box, #home_media .container-xl .media-box, #home_media .container-xxl .media-box {
   position: relative;
   display: block;
 }
-#media .container-fluid .media-box .media-box-caption, #media .container-sm .media-box .media-box-caption, #media .container-md .media-box .media-box-caption, #media .container-lg .media-box .media-box-caption, #media .container-xl .media-box .media-box-caption, #media .container-xxl .media-box .media-box-caption {
+#home_media .container-fluid .media-box .media-box-caption, #home_media .container-sm .media-box .media-box-caption, #home_media .container-md .media-box .media-box-caption, #home_media .container-lg .media-box .media-box-caption, #home_media .container-xl .media-box .media-box-caption, #home_media .container-xxl .media-box .media-box-caption {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11444,16 +11444,16 @@ header.masthead h1, header.masthead .h1 {
   transition: opacity 0.25s ease;
   text-align: center;
 }
-#media .container-fluid .media-box .media-box-caption .project-category, #media .container-sm .media-box .media-box-caption .project-category, #media .container-md .media-box .media-box-caption .project-category, #media .container-lg .media-box .media-box-caption .project-category, #media .container-xl .media-box .media-box-caption .project-category, #media .container-xxl .media-box .media-box-caption .project-category {
+#home_media .container-fluid .media-box .media-box-caption .project-category, #home_media .container-sm .media-box .media-box-caption .project-category, #home_media .container-md .media-box .media-box-caption .project-category, #home_media .container-lg .media-box .media-box-caption .project-category, #home_media .container-xl .media-box .media-box-caption .project-category, #home_media .container-xxl .media-box .media-box-caption .project-category {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
 }
-#media .container-fluid .media-box .media-box-caption .project-name, #media .container-sm .media-box .media-box-caption .project-name, #media .container-md .media-box .media-box-caption .project-name, #media .container-lg .media-box .media-box-caption .project-name, #media .container-xl .media-box .media-box-caption .project-name, #media .container-xxl .media-box .media-box-caption .project-name {
+#home_media .container-fluid .media-box .media-box-caption .project-name, #home_media .container-sm .media-box .media-box-caption .project-name, #home_media .container-md .media-box .media-box-caption .project-name, #home_media .container-lg .media-box .media-box-caption .project-name, #home_media .container-xl .media-box .media-box-caption .project-name, #home_media .container-xxl .media-box .media-box-caption .project-name {
   font-size: 1.2rem;
 }
-#media .container-fluid .media-box:hover .media-box-caption, #media .container-sm .media-box:hover .media-box-caption, #media .container-md .media-box:hover .media-box-caption, #media .container-lg .media-box:hover .media-box-caption, #media .container-xl .media-box:hover .media-box-caption, #media .container-xxl .media-box:hover .media-box-caption {
+#home_media .container-fluid .media-box:hover .media-box-caption, #home_media .container-sm .media-box:hover .media-box-caption, #home_media .container-md .media-box:hover .media-box-caption, #home_media .container-lg .media-box:hover .media-box-caption, #home_media .container-xl .media-box:hover .media-box-caption, #home_media .container-xxl .media-box:hover .media-box-caption {
   opacity: 1;
 }
 

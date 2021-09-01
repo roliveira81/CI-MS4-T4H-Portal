@@ -48,12 +48,6 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
-    // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#media a.media-box'
-    });
-
 });
 
 //https://www.w3schools.com/howto/howto_js_scroll_to_top.asp

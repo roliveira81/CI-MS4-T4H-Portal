@@ -21,8 +21,6 @@
             <!-- Google fonts-->
             <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-            <!-- SimpleLightbox plugin CSS-->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
             <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>            
             <!-- Core theme CSS (includes Bootstrap)-->
             <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -34,9 +32,6 @@
         {% block corejs %}
             <!-- Bootstrap core JS-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-            <!-- SimpleLightbox plugin JS-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-            <!-- Core theme JS-->
         {% endblock %}
 
         {% block extra_js %}
@@ -52,10 +47,11 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link auto-hide" href="#shows">Shows</a></li>
-                        <li class="nav-item"><a class="nav-link auto-hide" href="#media">Media</a></li>
-                        <li class="nav-item"><a class="nav-link auto-hide" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link auto-hide" href="#contact">Contact</a></li>
+                        <li class="nav-item d-none"><a class="nav-link auto-hide" href="#page-top">Home</a></li>                        
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#home_shows">Shows</a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#home_media">Media</a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#home_about">About</a></li>
+                        <li class="nav-item"><a class="nav-link auto-hide" href="#home_contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Merch</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
@@ -120,6 +116,21 @@
 
         {% block postloadjs %}
             <script src="{% static 'js/scripts.js' %}"></script>
+            <script>
+                if (window.location.pathname !== '/')
+                {
+                    $(document).on('click', '#navbarSupportedContent a', function(e) {
+                        e.preventDefault();
+                        let target = $(this).attr('href');
+                    
+                        if (target.indexOf('#home_') > -1)
+                        {
+                            target = "{% url 'home' %}" + target
+                            window.location.href = target;
+                        }
+                    });
+                }                
+            </script>
         {% endblock %}
     </body>
 </html>

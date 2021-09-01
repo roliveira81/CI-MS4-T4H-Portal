@@ -73,7 +73,9 @@
                                 {% endif %}                                
                             </ul>
                         </li>            
-                        <li class="nav-item"><a class="nav-link" href="#cart"><i class="bi-cart-fill"></i> 0</a></li>                        
+                        {% if total_items %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'view_bag' %}"><i class="bi-cart-fill"></i> {{ total_items }}</a></li>                        
+                        {% endif %}                        
                     </ul>
                 </div>
             </div>        

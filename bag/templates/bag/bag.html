@@ -36,7 +36,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-7 col-lg-9 col-xl-9">
-                                            <form id="productForm" method="POST" action="">
+                                            <form id="productForm" method="POST" action="{% url 'update_bag' item.item_id %}">
                                                 {% csrf_token %}                                   
                                                 {% if item.product.has_sizes %}
                                                     <input type="hidden" name="product_size" value="{{ item.size }}">
@@ -73,7 +73,7 @@
                                                             <i class="bi bi-trash"></i>
                                                         </a>
                                                     </div>
-                                                    <p class="mb-0"><span><strong id="summary">${{ item.product.price }}</strong></span></p>
+                                                    <p class="mb-0"><span><strong id="summary">${{ item.product.price | calc_subtotal:item.quantity }}</strong></span></p>
                                                 </div>
                                             </div>
                                         </div>

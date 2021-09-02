@@ -132,8 +132,21 @@ function decrementQtt(productId, actionSubmit) {
     }    
 }   
 
-//prevent form with quantity 0 to be submitted
+//t4hModal form with quantity 0 to be submitted
 $('form').on('submit', function() {
     if($("#qttField").val() == 0)
         return false;
+});
+
+//Trigger the t4hModal 
+if ($('#t4hModal').length)
+{
+    var myModal = new bootstrap.Modal($('#t4hModal'), {
+        keyboard: false
+    })
+    myModal.show();
+}
+
+$(document).ready(function(){
+    $(".toast").toast('show');
 });

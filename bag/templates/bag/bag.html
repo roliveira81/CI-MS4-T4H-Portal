@@ -30,8 +30,15 @@
                                             <div class="mb-3 mb-md-0">
                                                 <a href="#!">
                                                     <div class="mask">
-                                                        <img class="img-fluid w-100"
-                                                            src="{{ item.product.image.url }}">
+                                                        <a href="{% url 'product_detail' item.product.id %}">
+                                                            {% if item.product.image %}
+                                                                <img class="img-fluid w-100"
+                                                                src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                                            {% else %}
+                                                                <img class="img-fluid w-100"
+                                                                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="{{ item.product.name }}">
+                                                            {% endif %}                                                           
+                                                        </a>
                                                     </div>
                                                 </a>
                                             </div>
@@ -134,7 +141,11 @@
                                         <span><strong>${{ total|floatformat:2 }}</strong></span>
                                     </li>
                                 </ul>
-                                <a type="button" class="btn btn-primary btn-block" href="checkout.html">Secure Checkout</a>
+                                <a type="button" class="btn btn-primary btn-block" href="checkout.html">Secure Checkout
+                                    <span class="icon">
+                                        <i class="bi bi-lock"></i>
+                                    </span>
+                                </a>
                                 <a class="btn btn-outline-dark mt-auto" href="{% url 'products' %}">Keep Shopping</a>
                             </div>
                         </div>

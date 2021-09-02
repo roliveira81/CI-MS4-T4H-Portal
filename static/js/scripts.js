@@ -103,21 +103,30 @@ $('input.floatNumber').on('input', function() {
 
 //increment/decrement value on product quantity input fields
 
-function incrementQtt() {
+function incrementQtt(actionSubmit) {
     let i = $("#qttField").val();
     if (i < 99) {
         i++;
     }
     $("#qttField").val(i);
+    if (actionSubmit)
+    {
+        console.log(actionSubmit);
+        $("#productForm").submit();
+    }
 }
 
 //decrement value on product quantity input fields
-function decrementQtt() {
+function decrementQtt(actionSubmit) {
     let i = $("#qttField").val(); 
     if (i > 1) {
         --i;
     }
     $("#qttField").val(i);
+    if (actionSubmit)
+    {
+        $("#productForm").submit();
+    }    
 }   
 
 //prevent form with quantity 0 to be submitted

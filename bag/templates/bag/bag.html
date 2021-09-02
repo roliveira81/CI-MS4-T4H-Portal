@@ -69,11 +69,11 @@
                                                 </div>
                                                 <div class="d-flex justify-content-between align-items-end">
                                                     <div>
-                                                        <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
+                                                        <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
                                                             <i class="bi bi-trash"></i>
                                                         </a>
                                                     </div>
-                                                    <p class="mb-0"><span><strong id="summary">${{ item.product.price | calc_subtotal:item.quantity }}</strong></span></p>
+                                                    <p class="mb-0"><span><strong id="summary"></strong></span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,4 +143,20 @@
             </div>
         </div>
     </section>
+    
+    <script type="text/javascript">
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('product_size');
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+    
+            $.post(url, data)
+             .done(function() {
+                 location.reload();
+             });
+        })
+    </script>    
 {% endblock %}

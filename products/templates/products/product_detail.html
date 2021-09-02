@@ -33,7 +33,7 @@
                     </div>
                     <p class="text-muted mb--0">{{ product.description }}</p>
                     
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form" id="productForm" action="{% url 'add_to_bag' product.id %}" method="POST">
                         <div class="row">
                             {% csrf_token %}
                             {% with product.has_sizes as s %}

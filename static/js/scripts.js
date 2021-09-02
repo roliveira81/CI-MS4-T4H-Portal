@@ -103,29 +103,32 @@ $('input.floatNumber').on('input', function() {
 
 //increment/decrement value on product quantity input fields
 
-function incrementQtt(actionSubmit) {
-    let i = $("#qttField").val();
+function incrementQtt(productId, actionSubmit) {
+    var fieldName = 'qttField' + productId;
+    var formName = 'productForm' + productId; 
+    let i = $("#"+fieldName).val();
     if (i < 99) {
         i++;
     }
-    $("#qttField").val(i);
+    $("#"+fieldName).val(i);
     if (actionSubmit)
     {
-        console.log(actionSubmit);
-        $("#productForm").submit();
+        $("#" + formName).submit();
     }
 }
 
 //decrement value on product quantity input fields
-function decrementQtt(actionSubmit) {
-    let i = $("#qttField").val(); 
+function decrementQtt(productId, actionSubmit) {
+    var fieldName = 'qttField' + productId;
+    var formName = 'productForm' + productId;
+    let i = $("#"+fieldName).val(); 
     if (i > 1) {
         --i;
     }
-    $("#qttField").val(i);
+    $("#"+fieldName).val(i);
     if (actionSubmit)
     {
-        $("#productForm").submit();
+        $("#" + formName).submit();
     }    
 }   
 

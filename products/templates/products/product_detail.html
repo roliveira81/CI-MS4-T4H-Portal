@@ -33,7 +33,7 @@
                     </div>
                     <p class="text-muted mb--0">{{ product.description }}</p>
                     
-                    <form class="form" id="productForm" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form" id="productForm{{ product.id }}" action="{% url 'add_to_bag' product.id %}" method="POST">
                         <div class="row">
                             {% csrf_token %}
                             {% with product.has_sizes as s %}
@@ -51,11 +51,11 @@
                             {% endif %}                        
                             <div class="col-6 align-self-end mt-5">
                                 <div class="d-flex align-items-center">
-                                    <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" onclick="decrementQtt(false)">
+                                    <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" onclick="decrementQtt('{{ product.id }}',false)">
                                         <i class="bi bi-dash"></i>
                                     </a>
-                                    <input class="form-control text-center floatNumber" style="width: 4rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ product.id }}" id="qttField" required>
-                                    <a href="#!" type="button" title="Add item" class="btn btn-primary btn-small" onclick="incrementQtt(false)">
+                                    <input class="form-control text-center floatNumber" style="width: 4rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ product.id }}" id="qttField{{ product.id }}" required>
+                                    <a href="#!" type="button" title="Add item" class="btn btn-primary btn-small" onclick="incrementQtt('{{ product.id }}',false)">
                                         <i class="bi bi-plus"></i>
                                     </a>
                                 </div>

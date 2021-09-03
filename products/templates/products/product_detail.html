@@ -12,7 +12,7 @@
                     <p class="text-muted mb-5">Check how cool that item would fit you!</p>
                 </div>
             </div>
-            <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="row gx-4 gx-lg-5 align-items-start">
                 <div class="col-md-6">
                     {% if product.image %}                    
                         <a href="{{ product.image.url }}" target="_blank">
@@ -27,18 +27,15 @@
                 <div class="col-md-6">
                     <div class="small mb-1"><i class="bi bi-tags mr-1"></i> {{ product.category.friendly_name }}</div>
                     <h2 class="mt-0">{{ product.name }}</h2>
-                    <div class="fs-5 mb-5">
-                        <span class="text-decoration-line-through">$30.00</span>
-                        <span>${{ product.price }}</span>
-                    </div>
                     <p class="text-muted mb--0">{{ product.description }}</p>
+ 
                     
                     <form class="form" id="productForm{{ product.id }}" action="{% url 'add_to_bag' product.id %}" method="POST">
                         <div class="row">
                             {% csrf_token %}
                             {% with product.has_sizes as s %}
                             {% if s %}
-                                <div class="col-12 mt-5">
+                                <div class="col-12 mt-3">
                                     <span>Size:</span>    
                                     <select class="form-select" name="product_size" id='id_product_size'style="width: 90px">
                                         <option value="xs">XS</option>
@@ -48,9 +45,20 @@
                                         <option value="xl">XL</option>
                                     </select>
                                 </div>
-                            {% endif %}                        
-                            <div class="col-6 align-self-end mt-5">
-                                <div class="d-flex align-items-center">
+                            {% endif %}                                                 
+                        </div> 
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <span>Price:</span>  
+                                <div class="fs-5">
+                                    <!-- <span class="text-decoration-line-through">$30.00</span> -->
+                                    <span>${{ product.price }}</span>
+                                </div>         
+                            </div>
+                        </div>                    
+                        <div class="row">
+                            <div class="col-6 mt-3 align-self-end">
+                                <div class="d-flex">
                                     <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" onclick="decrementQtt('{{ product.id }}',false)">
                                         <i class="bi bi-dash"></i>
                                     </a>
@@ -58,26 +66,27 @@
                                     <a href="#!" type="button" title="Add item" class="btn btn-primary btn-small" onclick="incrementQtt('{{ product.id }}',false)">
                                         <i class="bi bi-plus"></i>
                                     </a>
-                                </div>
-                            </div>
-                        </div> 
+                                </div>      
+                            </div>  
+                        </div>
                         <div class="row">
-                            <div class="col-6 fs-5 mt-5">
+                            <div class="col-6 mt-3 align-self-end">
                                 <button class="btn btn-primary btn-xl" type="submit">
                                     <i class="bi-cart-fill me-1"></i>
                                     Add to cart
                                 </button>
                             </div>
-                            <div class="col-6 fs-5 mt-5 align-self-end">
+                            <div class="col-6 mt-5" style="text-align: end;">
                                 <a class="btn btn-outline-dark mt-aut" href="{% url 'products' %}">Keep Shopping</a>  
-                            </div>
+                            </div>   
                         </div>
-                     
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
-                    </form>                               
+                    </form>        
+                         
                 </div>
             </div>
+            
         </div>
     </section>
 {% endblock %}

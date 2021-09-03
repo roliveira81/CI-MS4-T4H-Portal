@@ -47,16 +47,15 @@
                                             <form id="productForm{{ item.item_id }}" method="POST" action="{% url 'update_bag' item.item_id %}">
                                                 {% csrf_token %}                                   
                                                 <input type="hidden" name="product_size" value="{% if item.product.has_sizes %}{{ item.size }}{% endif %}">
-                                                <div class="row" style="height:100%; position:relative;">
+                                                <div class="row">
                                                     <div class="d-flex">
                                                         <div class="col-9">
                                                             <p class="mb-3 text-muted small"><i class="bi bi-tags mr-1"></i> {{ item.product.category.friendly_name }}</p>
                                                             <h5>{{ item.product.name }}</h5>
-                                                            <p class="mb-2 text-muted small">{{ item.product.description }}</p>
                                                             {% if item.product.has_sizes %}
-                                                                Size: <p class="mb-3 text-muted small">{{ item.size|upper }}</p>
+                                                                <span class="text-muted small" style="display: block;">Size: {{ item.size|upper }}</span>
                                                             {% endif %}
-                                                            <p class="mb-4 text-muted small">${{ item.product.price }}</p>
+                                                            <span class="text-muted small" style="display: block;">Qty: {{ item.quantity }}</span>
                                                         </div>
                                                         <div class="col-3 d-flex justify-content-end align-items-start">
                                                             <div class="d-flex align-items-center">
@@ -73,13 +72,13 @@
                                                             </small> -->
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex justify-content-between align-items-end">
+                                                    <div class="d-flex mt-5 justify-content-between align-items-end">
                                                         <div>
                                                             <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
                                                                 <i class="bi bi-trash"></i>
                                                             </a>
                                                         </div>
-                                                        <p class="mb-0"><span><strong id="summary">{{ item.product.price | calc_subtotal:item.quantity }}</strong></span></p>
+                                                        <p class="mb-0"><span><strong id="summary">${{ item.product.price | calc_subtotal:item.quantity }}</strong></span></p>
                                                     </div>
                                                 </div>
                                             </form>
@@ -89,33 +88,6 @@
                                 {% endfor %}
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <div class="pt-4">
-                                <h5 class="mb-4">Expected shipping delivery</h5>
-                                <p class="mb-0"> 10 working days.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card -->
-                        <div class="mb-3">
-                            <div class="pt-4">
-                                <h5 class="mb-4">We accept</h5>
-                                <img class="mr-2" width="45px"
-                                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                                    alt="Visa">
-                                <img class="mr-2" width="45px"
-                                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                                    alt="American Express">
-                                <img class="mr-2" width="45px"
-                                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                                    alt="Mastercard">
-                                <img class="mr-2" width="45px"
-                                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-                                    alt="PayPal acceptance mark">
-                            </div>
-                        </div>
-                        <!-- Card -->
                     </div>
 
                     <div class="col-lg-4">
@@ -141,12 +113,20 @@
                                         <span><strong>${{ total|floatformat:2 }}</strong></span>
                                     </li>
                                 </ul>
-                                <a type="button" class="btn btn-primary btn-block" href="checkout.html">Secure Checkout
-                                    <span class="icon">
-                                        <i class="bi bi-lock"></i>
-                                    </span>
-                                </a>
-                                <a class="btn btn-outline-dark mt-auto" href="{% url 'products' %}">Keep Shopping</a>
+                                <div class="row">
+                                    <div class="col-6">   
+                                        <a type="button" class="btn btn-primary btn-block" href="{% url 'checkout' %}">Secure Checkout
+                                            <span class="icon">
+                                                <i class="bi bi-lock"></i>
+                                            </span>
+                                        </a>
+    
+                                    </div>
+                                    <div class="col-6" style="text-align: end;">
+                                        <a class="btn btn-outline-dark mt-auto" href="{% url 'products' %}">Keep Shopping</a>
+                                    </div>
+    
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -2,6 +2,10 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block content %}
 <section class="page-section bg-light" id="cart">
     <div class="container px-4 px-lg-5 mt-5">
@@ -15,11 +19,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                             {% csrf_token %}
-                            <fieldset class="rounded px-3 mb-5">
-                                <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                            
+                            <fieldset class="rounded mb-5">                        
+                                <legend class="fieldset-label small text-muted px-2 w-auto">Details</legend>
                                 <div class="form-floating mb-3">
                                     {{ order_form.full_name | as_crispy_field }}
                                 </div>
@@ -27,8 +32,8 @@
                                     {{ order_form.email | as_crispy_field }}
                                 </div>                                
                             </fieldset>
-                            <fieldset class="rounded px-3 mb-5">
-                                <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                            <fieldset class="rounded mb-5">
+                                <legend class="fieldset-label small text-muted px-2 w-auto">Delivery</legend>
                                 <div class="form-floating mb-3">                                 
                                     {{ order_form.phone_number | as_crispy_field }}
                                 </div>
@@ -56,21 +61,33 @@
                                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                                     {% else %}
                                         <label class="form-check-label" for="id-save-info">
-                                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                            <a href="{% url 'account_signup' %}">Create an account</a> or 
+                                            <a href="{% url 'account_login' %}">login</a> to save this information
                                         </label>
                                     {% endif %}
                                 </div>
                             </fieldset>
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                            <fieldset class="px-3">
-                                <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                            <fieldset class="rounded">
+                                <legend class="fieldset-label small text-muted px-2 w-auto">Payment</legend>
                                 <!-- A Stripe card element will go here -->
-                                <div class="mb-3" id="card-element"></div>
-        
+                                <div class="form-floating mb-3" id="card-element"></div>
                                 <!-- Used to display form errors -->
                                 <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                                <input type="hidden" value="{{ client_secret }}" name="client_secret">
                             </fieldset>
+                            <div class="row">   
+                                <div class="col-6">   
+                                    <a type="button" class="btn btn-primary btn-block" href="{% url 'checkout' %}">Complete Order
+                                        <span class="icon">
+                                            <i class="bi bi-lock"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-6" style="text-align: end;">
+                                    <a class="btn btn-outline-dark mt-auto" href="{% url 'products' %}">Keep Shopping</a>
+                                </div>                                                      
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -169,10 +186,16 @@
                             <span><strong>${{ total|floatformat:2 }}</strong></span>
                         </li>
                     </ul>
-                    <a class="btn btn-outline-dark mt-auto" href="{% url 'products' %}">Keep Shopping</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

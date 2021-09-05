@@ -135,7 +135,8 @@
     </section>
 
     <script type="text/javascript">
-        // Remove item and reload on click took from BoutiqueAdo classes
+        // Remove item and reload the page on click
+        //code snipet took from BoutiqueAdo classes
         $('.remove-item').click(function(e) {
             var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('remove_')[1];

@@ -102,7 +102,6 @@ $('input.floatNumber').on('input', function() {
 });       
 
 //increment/decrement value on product quantity input fields
-
 function incrementQtt(productId, actionSubmit) {
     var fieldName = 'qttField' + productId;
     var formName = 'productForm' + productId; 
@@ -132,7 +131,7 @@ function decrementQtt(productId, actionSubmit) {
     }    
 }   
 
-//t4hModal form with quantity 0 to be submitted
+//Prevent t4hModal form with quantity 0 to be submitted
 $('form').on('submit', function() {
     if($("#qttField").val() == 0)
         return false;

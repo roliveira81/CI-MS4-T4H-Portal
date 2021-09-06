@@ -11603,7 +11603,7 @@ caption a {
   color: #6c757d; /* text-secondary */
 }
 
-.allauth-form-inner-content input {
+.allauth-form-inner-content input, select{
   margin-top: 1rem; /* mt-3 */  
 }
 
@@ -11639,7 +11639,7 @@ to adjust the template layout */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 

@@ -11648,3 +11648,13 @@ to adjust the template layout */
   line-height: 1.25;  
   padding: 1rem 0.75rem;
 }
+
+/* custom modal header bg */
+.alert-custom {
+  color: #f4623a;
+  background-color: #f4623a;
+  border-color: #fcd0c4;
+}
+.alert-custom .alert-link {
+  color: #752f1c;
+}

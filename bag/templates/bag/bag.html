@@ -17,12 +17,12 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="row my-5">
+            <div class="row gx-4 gx-lg-5 align-items-start">
                 {% if bag_items %}
                     <div class="col-lg-8">
                         <!-- Card -->
-                        <div class="mb-3">
-                            <div class="pt-4 wish-list">
+                        <div>
+                            <div>
                                 <h5 class="mb-4">Cart (<span>{{ product_count }}</span> items)</h5>
                                 {% for item in bag_items %}
                                     <div class="row mb-4">
@@ -62,7 +62,7 @@
                                                                 <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" onclick="decrementQtt('{{ item.item_id }}',true);">
                                                                     <i class="bi bi-dash"></i>
                                                                 </a>
-                                                                <input class="form-control text-center floatNumber" value="{{ item.quantity }}" style="width: 4rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ item.item_id }}" id="qttField{{ item.item_id }}" required>
+                                                                <input class="form-control text-center floatNumber" value="{{ item.quantity }}" style="width: 3rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ item.item_id }}" id="qttField{{ item.item_id }}" required>
                                                                 <a href="#!" type="button" title="Add item" class="btn btn-primary btn-small" onclick="incrementQtt('{{ item.item_id }}',true);">
                                                                     <i class="bi bi-plus"></i>
                                                                 </a>
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="mb-3">
+                        <div>
                             <div class="pt-4">
                                 <h5 class="mb-3">The total</h5>
                                 <ul class="list-group list-group-flush">

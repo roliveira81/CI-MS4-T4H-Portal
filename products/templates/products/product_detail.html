@@ -20,7 +20,7 @@
                         </a>
                     {% else %}
                         <a href="">
-                            <img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="{{ product.name }}">
                         </a>
                    {% endif %}                  
                 </div>
@@ -57,12 +57,12 @@
                             </div>
                         </div>                    
                         <div class="row">
-                            <div class="col-6 mt-3 align-self-end">
-                                <div class="d-flex">
+                            <div class="col-6 mt-3">
+                                <div class="d-flex align-items-center">
                                     <a href="#!" type="button" title="Remove item" class="btn btn-primary btn-small" onclick="decrementQtt('{{ product.id }}',false)">
                                         <i class="bi bi-dash"></i>
                                     </a>
-                                    <input class="form-control text-center floatNumber" style="width: 4rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ product.id }}" id="qttField{{ product.id }}" required>
+                                    <input class="form-control text-center floatNumber" style="width: 3rem" type="num" name="quantity" value="1" min="1" max="99" maxlength="2" data-item_id="{{ product.id }}" id="qttField{{ product.id }}" required>
                                     <a href="#!" type="button" title="Add item" class="btn btn-primary btn-small" onclick="incrementQtt('{{ product.id }}',false)">
                                         <i class="bi bi-plus"></i>
                                     </a>

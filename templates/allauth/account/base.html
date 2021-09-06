@@ -1,1 +1,10 @@
 {% extends "base.html" %}
+
+{% block content %}
+<section class="page-section bg-light" id="cart">
+    <div class="container px-4 px-lg-5 mt-5 allauth-form-inner-content">
+        {% block inner_content %}
+        {% endblock %}        
+    </div>
+</section>
+{% endblock %}

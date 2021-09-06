@@ -4977,8 +4977,8 @@ textarea.form-control-lg {
 }
 
 .alert-danger {
-  color: #842029;
-  background-color: #f8d7da;
+  color: black;
+  background-color: red;
   border-color: #f5c2c7;
 }
 .alert-danger .alert-link {

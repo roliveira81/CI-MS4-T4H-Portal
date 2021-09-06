@@ -36,9 +36,18 @@
                             </div>
                         </div>
                         <!-- Product actions-->
+                     
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product_detail' product.id %}">See details</a></div>
                         </div>
+                        {% if request.user.is_superuser %}
+                            <div class="row mb-3 align-self-center">
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            </div>
+                        {% endif %}   
                     </div>
                 </div>
                 {% endfor %}

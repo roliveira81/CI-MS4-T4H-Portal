@@ -1,0 +1,1 @@
+web: gunicorn T4H_Portal.wsgi:application

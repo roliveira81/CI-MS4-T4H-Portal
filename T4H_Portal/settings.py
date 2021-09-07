@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 't4h_portal.urls'
+ROOT_URLCONF = 'T4H_Portal.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -121,7 +121,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-WSGI_APPLICATION = 't4h_portal.wsgi.application'
+WSGI_APPLICATION = 'T4H_Portal.wsgi.application'
 
 
 # Database

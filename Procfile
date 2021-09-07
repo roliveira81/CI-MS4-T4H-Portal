@@ -1,1 +1,1 @@
-web: gunicorn t4h_portal.wsgi:application
+web: gunicorn T4H_Portal.wsgi:application

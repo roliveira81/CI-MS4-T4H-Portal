@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 't4h_portal.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'T4H_Portal.settings')
 
 application = get_wsgi_application()

@@ -30,9 +30,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# DEBUG = 'DEVELOPMENT' in os.environ
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['t4h-portal-app.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['t4h-portal-app.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -68,7 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'T4H_Portal.urls'
+ROOT_URLCONF = 't4h_portal.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -119,7 +120,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-WSGI_APPLICATION = 'T4H_Portal.wsgi.application'
+WSGI_APPLICATION = 't4h_portal.wsgi.application'
 
 
 # Database

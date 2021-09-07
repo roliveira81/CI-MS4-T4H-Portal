@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'T4H_Portal.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 't4h_portal.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

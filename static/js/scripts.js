@@ -149,3 +149,22 @@ if ($('#t4hModal').length)
 $(document).ready(function(){
     $(".toast").toast('show');
 });
+
+//A bootstrap form validation function
+//https://getbootstrap.com/docs/5.0/forms/validation/
+(function () {
+    'use strict'
+    const forms = document.querySelectorAll('.requires-validation')
+
+    Array.from(forms)
+    .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+})()  

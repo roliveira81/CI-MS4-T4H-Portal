@@ -1,16 +1,16 @@
 <div align="center">
 <img src="static/img/logos/logo_readme.png" alt="T4H Metallica Tribute Band"/>
 <br>
-A METALLICA tribute band from Brazil
+Brazilian METALLICA tribute band
 </div>
 
 # Overview
 
 This is the virtual HQ of one of the most important Metallica tribute bands from South America, called THE FOUR HORSEMEN. A responsive website for those interested in finding out more about the band's history and activities, our members, merchandising, upcoming shows and taking the band to their city/country.
 
-THE FOUR HORSEMEN born in 2003, aiming to reproduce the spirit and presence of the most extraordinary band in the world, METALLICA. Underneath the passion for their style and sound, our band's restless motivation is to bring the audience the feeling of being in an authentic Metallica concert.
+tribute band born in 2003, aiming to reproduce the spirit and presence of the most extraordinary band in the world, METALLICA. Underneath the passion for their style and sound, our band's restless motivation is to bring the audience the feeling of being in an authentic Metallica concert.
 
-The aim of this web application is to strengthen our online presence, gathering all the information spread over other social media platforms and have the chance to sell band merchandising products and increase show business managers interaction, offering a proper communication channel.
+The aim of this web application is to strengthen our online presence, gathering all the information spread over other social media platforms and have the chance to sell band merchandising products, as well as increase show business managers interactions, offering a proper communication channel.
 
 ---
 ![App ScreenShot](static/images/)
@@ -43,13 +43,13 @@ The aim of this web application is to strengthen our online presence, gathering 
 
 - Anonymous user
 
-  - As an anonymous user, I want easily navigate the site and find info about the band quickly;
+  - As an anonymous user, I want to easily navigate the site and quickly find info about the band;
   - As an anonymous user, I want to navigate through a responsive app and be able to access it by mobile, tablet or desktop device nicely;
-  - As an anonymous user, I want to get more details about the band, its media source and history and consider book the band;
-  - As an anonymous user, I want to check the upcoming concert dates quickly browsing by band tour calendar;
-  - As an anonymous user, I want to find the band other social media, so that I can following them;
+  - As an anonymous user, I want to get more details about the band, its media sources and history and consider booking the band;
+  - As an anonymous user, I want to check the upcoming concert dates quickly browsing the band tour calendar;
+  - As an anonymous user, I want to find the band's social media channels, so that I can start following them;
   - As an anonymous user, I want to see videos and photos and check their live performances;
-  - As an anonymous user, I want to check the merchandising items and their prices, so that I can make an order and support the band;
+  - As an anonymous user, I want to check the merchandising items and their prices, so that I can place an order and support the band;
   - As an anonymous user, I want to access contact details, so that I can get in touch to book the band;
   - As an anonymous user, I want to register for a user profile account by email and password and store details of orders history;
 
@@ -57,7 +57,7 @@ The aim of this web application is to strengthen our online presence, gathering 
 
   - As a registered user, I want to log in and log out of my profile account and keep my information safe for future accesses;
   - As a registered user, I want to update my details, so that I can change my delivery address for future purchases;
-  - As a registered user, I want to store my details for later use avoiding having to retype it on the next purchase;
+  - As a registered user, I want to store my details for later use, avoiding to retype it on the next purchase;
   - As a registered user, I want to store my purchase history and check the goods delivery status;
   - As a registered user, I want to select the quantity of each product I want to order, entering the quantity of each I want to purchase;
   - As a registered user, I want to review my purchase choices at checkout, so that I can decide to add or remove products before confirming;
@@ -78,19 +78,19 @@ The aim of this web application is to strengthen our online presence, gathering 
 
 ### Strategy
 
-Based on 17 years of experience touring throughout Brazil, some Latin American countries and has been in Portugal and Spain once, THE FOUR HORSEMEN has become an increasingly strong and professional live music project.
+With over 17 years of experience consistently touring Brazil, some gigs in Latin American countries and a tour in Portugal and Spain, THE FOUR HORSEMEN has become an increasingly strong and professional live music project.
 
-This website project comes to shows how serious we are about performing alive and getting booked, working behind the scenes making it easy to learn more about the band and connect, while we are on the road.
+This website project comes to show we take work behind the scenes as seriously as being on the road and performing live.
 
-The main strategy of this site is to translate our stage presence, giving us a boost in the right direction, selling merch or booking concerts, making possible fans and the live music industry be able to find us at our official website address.
+The strategy of this website is to translate our stage presence, giving us a boost in the right direction by selling merch, booking concerts amd bringing potential fans and the live music industry closer to us.
 
 #### Project Goals
 
-Increase internet presence presenting relevant content about the band and improve its positioning in the main internet search engines outcomes. Increasing number of fans, increasing concert bookings and merchan sales.
+Increase internet presence presenting relevant content about the band and improving its positioning in the main internet search engines. Increasing number of fans, increasing concert bookings and merchandising sales.
 
 #### User Goals
 
-Users can find easily the band info details, see photos and videos, purchase band's merch or booking concerts.
+Users can easily find info about the band, see photos and videos, purchase merch or book concerts.
 
 ### Scope
 
@@ -102,13 +102,13 @@ Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
 - Intuitive and responsive Navigation menu
 - About section on Home page to read the band concept
 - Shows section on Home page to read the upcoming concert dates
-- Media section with an interactive lightbox with images and Youtube embed live performance videos  
+- Media section with an interactive lightbox with images and Youtube embedded live performance videos  
 - Merch page with available band merchandise 
 - Login page with form
 - Profile/account page
 - Checkout page
 - Order history and status page
-- Footer element with social media icon links.
+- Footer element with social media links.
 - Ability for admin user to add, update and delete concert date entries.
 - Ability for admin to add, update and delete stock merch entries.
 - Ability for admin to update orders delivery status.
@@ -116,8 +116,8 @@ Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
 
 #### Future Features to Implement
 
-- Login with others Social Media options
-- Share content with others Social Media apps
+- Login with other Social Media options
+- Share content with other Social Media apps
 - Media content manageable by Admin system
 - Forgot Password feature
 - Past Dates on Shows section.
@@ -125,12 +125,12 @@ Built based on technologies such: HTML, CSS, JavaScript, Python and Django.
 
 ### Structure
 
-The structure is a mix of a single page application, to ease of navigation to each content section hinting for quick impact and a multiple page application to provides a progressive step while purchase process, making it easier.
+The structure is a mix of a single page application, easing the navigation to each content with section hinting for quick impact, and a multiple page application with progressive steps along the purchase process, making it easier.
 
 #### Interaction Design and Architecture
 
-A template with a full-width content area to layout the texts, images, and photos aiming straightforward navigation supported by Django apps built using bootstrap 5 Html elements
-All the content is organized accordingly the main menu at the top presenting the sections sequence and clearly for the user.
+A template with a full-width content area to layout texts, images and photos aiming straightforward navigation supported by Django apps built using bootstrap 5 Html elements
+All the content is organized according to the main menu at the top, clearly presenting the user the sections sequence.
 
 #### Databases
 

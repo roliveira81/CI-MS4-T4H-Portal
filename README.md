@@ -13,9 +13,9 @@ tribute band born in 2003, aiming to reproduce the spirit and presence of the mo
 The aim of this web application is to strengthen our online presence, gathering all the information spread over other social media platforms and have the chance to sell band merchandising products, as well as increase show business managers interactions, offering a proper communication channel.
 
 ---
-![App ScreenShot](static/images/)
+![App ScreenShot](static/img/docs/preview.png)
 
-[Access the App here](https:///)
+[Access the App here](https://t4h-portal-app.herokuapp.com/)
 
 **Please note**: To open any links in this document in a new browser tab, please press `CTRL + Click`.
 

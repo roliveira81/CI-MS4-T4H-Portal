@@ -14,4 +14,4 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('-date')
 
 
-admin.site.register(Show)    
+admin.site.register(Show)

@@ -1,11 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from shows.models import Show
 
-from django.conf import settings
-from django.http import HttpResponse
-from django.core.mail import send_mail, BadHeaderError
-from django.contrib import messages
 from datetime import datetime
+
 
 def all_products(request):
     """ A view to return all shows - include """

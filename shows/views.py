@@ -1,14 +1,12 @@
 from django.shortcuts import render
 from shows.models import Show
 
-from datetime import datetime
 
-
-def all_products(request):
+def all_shows(request):
     """ A view to return all shows - include """
 
     # returns just upcoming dates
-    shows = Show.objects.all().filter(date__gte=datetime.now())
+    shows = Show.objects.all()
 
     context = {
         'shows': shows

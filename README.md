@@ -392,33 +392,33 @@ Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](ht
 1. [Sign up](https://signup.heroku.com/login) for an account on Heroku or [Log in](https://id.heroku.com/login) with your existing account.
 
 2. Click on the 'New' dropdown box and 'Create new app'
-![Create app on Heroku screenshot](docs/deploy/step1.png)
+![Create app on Heroku screenshot](static/docs/deploy/step1.png)
 
 3. Name your app, choose the appropriate region and submit.
-![Naming app screenshot](docs/deploy/step2.png)
+![Naming app screenshot](static/docs/deploy/step2.png)
 
 4. Postgres requires dj_database_url, and psycopg2, which will be installed when the requirements.txt dependencies are installed as explained earlier.
 
 5. Click on the Deploy tab and select the GitHub option, then choose you GitHub account and search for the repository to connect to. Once confirmed, press 'Connect'.
-![Connect GitHub screenshot](docs/deploy/step3.png)
+![Connect GitHub screenshot](static/docs/deploy/step3.png)
 
 6. Under Manual deploy, choose your main (or sometime called master) branch to deploy to and press 'Deploy Branch'
-![Manual deploy screenshot](docs/deploy/step4.png)
+![Manual deploy screenshot](static/docs/deploy/step4.png)
 
 7. Once the build has completed, under Automatic deploys, choose your main (or sometime called master) branch and press 'Enable Automatic Deploys'
-![Automatic deploy screenshot](docs/deploy/step5.png)
+![Automatic deploy screenshot](static/docs/deploy/step5.png)
 
 8. Click on the Settings tab and then the 'Reveal Config Vars' button to reveal the Environmental Variables
-![Config Vars reveal button screenshot](docs/deploy/step6.png)
+![Config Vars reveal button screenshot](static/docs/deploy/step6.png)
 
 9. Enter your Environmental variables and values with the following fields:
-![Config Vars screenshot](docs/deploy/step7.png)
+![Config Vars screenshot](static/docs/deploy/step7.png)
 
 > [Back to Top](#table-of-contents)  
 
 ## Testing
 
-Testing documentation can be found on a separate document [HERE](docs/TESTING.md)
+Testing documentation can be found on a separate document [HERE](static/docs/TESTING.md)
 
 ## Credits
 

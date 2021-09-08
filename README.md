@@ -34,6 +34,10 @@ The aim of this web application is to strengthen our online presence, gathering 
   * [WireFrames](#wireframes)    
 - [Surface](#surface)   
 - [Technologies Used](#technologies-used)
+  * [Languages](#languages)  
+  * [Dependencies](#dependenciess)
+  * [Integration](#integration)  
+  * [Tools](#dependenciess)
 
 ### Structure
 
@@ -156,7 +160,7 @@ All the content is organized according to the main menu at the top, clearly pres
 
   - The **OrderLineItem** model stores information from the order, used in calculation in the Order model.
 
-#### Model Relationship Data Schema
+#### Model Data Schema
 
 ![DB Schema](static/docs/db_export.png)
 

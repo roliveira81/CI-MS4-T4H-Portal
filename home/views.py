@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
+from shows.models import Show
 
 from django.conf import settings
 from django.http import HttpResponse
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
+from datetime import datetime
 
 
 def index(request):
@@ -11,6 +13,14 @@ def index(request):
     A view to return index page
     Contact form handler 
     """
+
+    # returns just upcoming dates
+    shows = Show.objects.all().filter(date__gte=datetime.now())
+
+    context = {
+        'shows': shows
+    }
+
     if request.method == 'POST':
         email = request.POST['email']
         name = request.POST['name']
@@ -36,4 +46,4 @@ def index(request):
 
     template = 'home/index.html'
 
-    return render(request, template)
+    return render(request, template, context)

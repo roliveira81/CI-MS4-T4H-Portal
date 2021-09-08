@@ -35,7 +35,7 @@ The aim of this web application is to strengthen our online presence, gathering 
 - [Surface](#surface)   
 - [Technologies Used](#technologies-used)
   * [Languages](#languages)  
-  * [Dependencies](#dependenciess)
+  * [Dependencies](#dependencies)
   * [Integration](#integration)  
   * [Tools](#dependenciess)
 
@@ -139,6 +139,7 @@ All the content is organized according to the main menu at the top, clearly pres
 #### Databases
 
 - [SQLite3](https://www.sqlite.org/index.html) used in Development, which comes as default with Django installation.
+- [Heroku Postgres](https://www.heroku.com/postgres) used in Production, by Heroku cloud environment.
 
 #### Apps and Models used
 
@@ -196,7 +197,8 @@ The idea is to keep it simple and straightforward, gathering info in sections on
 
 ### Surface  
 
-For clean code purposes, I chose a Bootstrap template that perfectly matches the objectives of this website idea, taking leverage of the boilerplate pre-built by [StartBootstrap](https://github.com/startbootstrap/startbootstrap-creative).
+For clean code purposes, I chose a Bootstrap template that perfectly matches the objectives of this website idea, taking leverage of the boilerplate pre-built by [StartBootstrap](https://github.com/startbootstrap/startbootstrap-creative). 
+Anyway, even have taken leverage of the StartBootstrap template, all app screens were customized for the project purposes.
 
 #### Colours
 
@@ -275,9 +277,183 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes.
 - [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content.
 
-### Other
+### Issues and Barries
 
-- [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
-- [Am I Responsive](http://ami.responsivedesign.is/) - Site mockup generator.
+- Debugging was a bit issue throughout the development. Django and Python don't look debugging friendly.
+- Many times we come accross a Python issue "received a naive datetime while time zone support is active" with no reason. It seams an development environment issue.
 
 > [Back to Top](#table-of-contents)  
+
+## Deployment steps
+
+### Version Control
+
+- Used Git for version control.
+- Various branches were created for features.
+- The branches were then merged with the main branch once any conflicts were resolved.
+
+### Development Environment
+
+- Visual Studio was the IDE (Integrated Development Environment), used in a local development environment.
+
+### Local Installation
+
+#### 1. Clone the project
+
+- The code can be run locally through clone or download from the repository on GitHub.
+- You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'.
+- The Clone option provides a URL, which you can use on your CLI with `git clone <paste url>`.
+- The Download ZIP option provides a link to download a ZIP file which can be unzipped on your local machine. The files can then be uploaded to your IDE.
+
+#### 2. Create a Virtual Environment
+
+In the Terminal window:
+
+- Navigate to the folder of the installed files with `cd <path>`
+- Create the virtual environment folder with `python -m venv venv`
+- Activate the virtual environment with `venv\Scripts\activate.bat`
+
+#### 3. Create Environmental Variables
+
+- For sensitive information/passwords, create an `env.py` file to store these as environmental variables.
+
+```python
+import os
+
+# Django Secret key - ensure you remove it 
+os.environ['SECRET_KEY'] = '<value>'
+
+# stripe
+os.environ['STRIPE_PUBLIC_KEY'] ='<value>'
+os.environ['STRIPE_SECRET_KEY'] ='<value>'
+os.environ['STRIPE_WH_SECRET'] = '<value>'
+
+# DB
+os.environ['DATABASE_URL'] ='<value>'
+
+# AWS
+os.environ['AWS_ACCESS_KEY_ID'] = '<value>'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '<value>'
+
+# Email
+os.environ['DEFAULT_FROM_EMAIL'] = '<value>'
+os.environ['EMAIL_HOST_USER'] = '<value>'
+os.environ['EMAIL_HOST_PASSWORD'] = '<value>'
+
+```
+
+This file is added to the `.gitignore` file detailed below.
+
+#### 4. Create a .gitignore file
+
+- Create a file called `.gitignore` in the root directory and ensure it contains the following git exclusions:
+
+```text
+    core.Microsoft*
+    core.mongo*
+    core.python*
+    env.py
+    __pycache__/
+    *.py[cod]
+    venv
+    .vscode
+    *.sqlite3
+    *.pyc
+    my_database.sql
+    db.dump
+```
+
+#### 5. Install project dependencies
+
+- Install project requirements by typing `pip install -r requirements.txt`
+
+#### 6. Migrate
+
+- Apply model migrations using `python manage.py migrate`
+
+#### 7. Create a SuperUser account
+
+- Type `python manage.py createsuperuser` and following the username and passwords prompts from the terminal.
+
+#### 8. Deploy locally
+
+- To run the project locally, in the terminal type `python manage.py runserver`
+- This will open a localhost address, which is provided in the CLI.
+- Either copy and paste the url (provided in the terminal) into a new browser tab, or hover over it and click *follow link*
+
+## Deployment
+
+This project has been deployed to [HEROKU](https://www.heroku.com/)
+
+Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html)
+
+### Deployment Instructions
+
+1. [Sign up](https://signup.heroku.com/login) for an account on Heroku or [Log in](https://id.heroku.com/login) with your existing account.
+
+2. Click on the 'New' dropdown box and 'Create new app'
+![Create app on Heroku screenshot](docs/deploy/step1.png)
+
+3. Name your app, choose the appropriate region and submit.
+![Naming app screenshot](docs/deploy/step2.png)
+
+4. Postgres requires dj_database_url, and psycopg2, which will be installed when the requirements.txt dependencies are installed as explained earlier.
+
+5. Click on the Deploy tab and select the GitHub option, then choose you GitHub account and search for the repository to connect to. Once confirmed, press 'Connect'.
+![Connect GitHub screenshot](docs/deploy/step3.png)
+
+6. Under Manual deploy, choose your main (or sometime called master) branch to deploy to and press 'Deploy Branch'
+![Manual deploy screenshot](docs/deploy/step4.png)
+
+7. Once the build has completed, under Automatic deploys, choose your main (or sometime called master) branch and press 'Enable Automatic Deploys'
+![Automatic deploy screenshot](docs/deploy/step5.png)
+
+8. Click on the Settings tab and then the 'Reveal Config Vars' button to reveal the Environmental Variables
+![Config Vars reveal button screenshot](docs/deploy/step6.png)
+
+9. Enter your Environmental variables and values with the following fields:
+![Config Vars screenshot](docs/deploy/step7.png)
+
+> [Back to Top](#table-of-contents)  
+
+## Testing
+
+Testing documentation can be found on a separate document [HERE](docs/TESTING.md)
+
+## Credits
+
+### Resources
+
+- [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge, particularly the Boutique Ado mini-project.
+- [Django](https://https://code.djangoproject.com/) - Django official documentation.
+- [Python](https://www.geeksforgeeks.org/python-string-length-len/) - Python official documentation.
+- [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - Bootstrap 5 official documentation.
+- [Stack Overflow](https://stackoverflow.com/) - General resource.
+- [YouTube](https://www.youtube.com/) - General resource.
+- [CSS-Tricks](https://css-tricks.com/) - General resource.
+- [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource.
+- [Colour Palette - Coolors.co](https://coolors.co)
+- [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool.
+- Code Institute **SLACK Community** - Main source of assistance.
+
+### Content
+
+All content is self-written by app developer.
+
+### Code Snippets
+
+- [W3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) - Customized menu automatic scroll.
+- [Getbootstrap](https://getbootstrap.com/docs/5.0/forms/validation/) - A bootstrap form validation function and modal system used on the application.
+
+## Acknowledgments
+
+- Being able to develop an application from scratch, going through every step from concept to creation, planning and development, applying the learnings from the last three months, was undoubtedly a breakthrough. It has broken new grounds when it comes to creative direction and diagramming and will certainly increase my skills as a developer.
+Although I had previous knowledge of HTML and CSS concepts, the opportunity to revisit its fundamentals and apply CSS commands made all the difference in making me more confident about future projects where I'll have to interact with front-end.
+
+## Considerations
+
+- Any queries, please email roberto.oliveira.ti@gmail.com
+
+> [Back to Top](#table-of-contents)  
+
+

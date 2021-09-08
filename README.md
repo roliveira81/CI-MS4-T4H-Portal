@@ -13,7 +13,7 @@ tribute band born in 2003, aiming to reproduce the spirit and presence of the mo
 The aim of this web application is to strengthen our online presence, gathering all the information spread over other social media platforms and have the chance to sell band merchandising products, as well as increase show business managers interactions, offering a proper communication channel.
 
 ---
-![App ScreenShot](static/img/docs/preview.png)
+![App ScreenShot](static/docs/preview.png)
 
 [Access the App here](https://t4h-portal-app.herokuapp.com/)
 
@@ -140,7 +140,7 @@ All the content is organized according to the main menu at the top, clearly pres
 
 - Home App
 
-  - The **Agenda model** stores information about the tour dates.
+  - The **Shows model** stores information about the tour dates.
 
   - The **Product model** stores information about the band's merch.
 
@@ -158,7 +158,7 @@ All the content is organized according to the main menu at the top, clearly pres
 
 #### Model Relationship Data Schema
 
-![DB Schema](docs/)
+![DB Schema](static/docs/db_export.png)
 
 ### Skeleton
   
@@ -228,3 +228,52 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Django](#) Micro web framework written in Python
 
 ### Dependencies
+
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts.
+- [dj-database-url](https://pypi.org/project/dj-database-url/) - Utility to help you load your database into your dictionary from the DATABASE_URL environment variable. Heroku uses environment variables for your database and other addons.
+- [Django](https://www.djangoproject.com/) - High-level Python web framework that enables rapid development of secure and maintainable websites.
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+- [django-countries](https://pypi.org/project/django-countries/) - A Django application that provides country choices for use with forms, flag icons static files, and a country field for models.
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - application that helps to manage Django forms. It allows adjusting forms' properties (such as method, send button or CSS classes) on the backend without having to re-write them in the template.
+- [django-extensions](https://django-extensions.readthedocs.io/en/latest/) - A collection of custom extensions for the Django Framework.
+- [django-social-share](https://pypi.org/project/django-social-share/) - Templatetags for 'tweet this' and 'share on facebook'.
+- [django-storages](https://pypi.org/project/django-storages/) - A a project to provide a variety of storage backends in a single library.
+- [flake8](https://flake8.pycqa.org/en/latest/) - A great toolkit for checking your code base against coding style (PEP8), programming errors and to check cyclomatic complexity.
+- [gunicorn](https://docs.gunicorn.org/en/stable/) - An application server for running your python application instance.
+- [oauthlib](https://oauthlib.readthedocs.io/en/latest/) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+- [Pillow](https://pypi.org/project/Pillow/) - Python Imaging Library adds image processing capabilities to your Python interpreter. Adds support for opening, manipulating, and saving images.
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) - PostgreSQL database adapter for the Python programming language.
+- [pycodestyle](https://pypi.org/project/pycodestyle/) - Python style guide checker.
+- [pycparser](https://pypi.org/project/pycparser/) - Complete parser of the C language, written in pure Python using the PLY parsing library.
+- [pyflakes](https://pypi.org/project/pyflakes/) - Analyzes programs and detects various errors.
+- [python-http-client](https://pypi.org/project/python-http-client/) - Quickly and easily access any RESTful or RESTful-like API.
+- [requests](https://pypi.org/project/requests/) - Requests is a simple, yet elegant HTTP library.
+- [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) -  Provides first-class OAuth library support for Requests.
+- [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
+- [toml](https://pypi.org/project/toml/) - A Python library for parsing and creating TOML (Tom's Obvious, Minimal Language), a data serialisation language designed to be a minimal configuration file format that's easy to read due to obvious semantics.
+- [urllib3](https://pypi.org/project/urllib3/) - Powerful, user-friendly HTTP client for Python.
+- [Werkzeug](https://pypi.org/project/Werkzeug/) - Comprehensive WSGI (Web Server Gateway Interface) web application library.
+
+### Tools
+
+- [VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
+- [Git](https://git-scm.com/) - Distributed Version Control tool to store versions of files and track changes
+- [GitHub](https://github.com/) - A cloud-based hosting service to manage Git repositories
+- [Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
+- [AWS S3](https://aws.amazon.com/s3/) - Cloud storage for static and media files
+
+### Code Validity
+
+- HTML - [W3C](https://validator.w3.org/) - Markup Validation
+- CSS - [W3C](https://jigsaw.w3.org/css-validator/) - Jigsaw CSS Validation
+- JavaScript - [JSHINT](https://jshint.com/) - JavaScript code warning & error check
+- Python - [PEP8](http://pep8online.com/) Python code syntax checker
+- [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes.
+- [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content.
+
+### Other
+
+- [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
+- [Am I Responsive](http://ami.responsivedesign.is/) - Site mockup generator.
+
+> [Back to Top](#table-of-contents)  

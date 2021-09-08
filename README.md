@@ -38,6 +38,8 @@ The aim of this web application is to strengthen our online presence, gathering 
   * [Dependencies](#dependencies)
   * [Integration](#integration)  
   * [Tools](#dependenciess)
+- [Deployment steps](#deployment)
+- [Testing](#testing)
 
 ### Structure
 

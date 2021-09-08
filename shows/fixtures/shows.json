@@ -1,0 +1,142 @@
+[
+  {
+      "pk": 1,
+      "model": "shows.show",
+      "fields": {
+        "location": "Sao Paulo, BR",
+        "venue": "Manifesto Bar",
+        "tickets_url": "www.ticketmaster.com",
+        "date": "2022-01-02"
+      }
+    },    
+  {
+    "pk": 2,
+    "model": "shows.show",
+    "fields": {
+      "location": "Rio de Janeiro, BR",
+      "venue": "Jobin Arena",
+      "tickets_url": "www.ticketmaster.com",
+      "date": "2022-01-02"
+    }
+  },  
+  {
+    "pk": 3,
+    "model": "shows.show",
+    "fields": {
+      "location": "Lisboa, PT",
+      "venue": "Eka Palace",
+      "tickets_url": "www.ticketmaster.com",
+      "date": "2022-01-02"
+    }
+  },  
+  {
+      "pk": 4,
+      "model": "shows.show",
+      "fields": {
+        "location": "Sevilla, SP",
+        "venue": "Sprint Center",
+        "tickets_url": "www.ticketmaster.com",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 5,
+      "model": "shows.show",
+      "fields": {
+        "location": "Badajoz, SP",
+        "venue": "Metalarium Festival",
+        "tickets_url": "",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 6,
+      "model": "shows.show",
+      "fields": {
+        "location": "Granada, SP",
+        "venue": "La Sala",
+        "tickets_url": "www.ticketmaster.com",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 7,
+      "model": "shows.show",
+      "fields": {
+        "location": "Albufeira, PT",
+        "venue": "FNAC",
+        "tickets_url": "",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 8,
+      "model": "shows.show",
+      "fields": {
+        "location": "Madrid, SP",
+        "venue": "Barracudas Festival",
+        "tickets_url": "www.ticketmaster.com",
+        "date": "2022-01-02"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "shows.show",
+      "fields": {
+        "location": "Barcelona, SP",
+        "venue": "La Grange",
+        "tickets_url": "La Grange",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 10,
+      "model": "shows.show",
+      "fields": {
+        "location": "Eernegem, BE",
+        "venue": "Club B52",
+        "tickets_url": "",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 11,
+      "model": "shows.show",
+      "fields": {
+        "location": "Montijo, PT",
+        "venue": "Time Out Bar",
+        "tickets_url": "www.ticketmaster.com",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 12,
+      "model": "shows.show",
+      "fields": {
+        "location": "Bustos, PT",
+        "venue": "Hard Bar",
+        "tickets_url": "www.ticketmaster.com",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 13,
+      "model": "shows.show",
+      "fields": {
+        "location": "Sao Paulo, BR",
+        "venue": "Kiaora bar",
+        "tickets_url": "",
+        "date": "2022-01-02"
+      }
+    },  
+    {
+      "pk": 14,
+      "model": "shows.show",
+      "fields": {
+        "location": "Florianopolis, BR",
+        "venue": "John Bull",
+        "tickets_url": "",
+        "date": "2022-01-02"
+      }
+    }                                                
+]
